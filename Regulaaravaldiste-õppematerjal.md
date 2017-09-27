@@ -12,7 +12,7 @@ Regulaararvaldisest võib mõelda ka kui teatud tüüpi keelest, millel on oma r
 - **Metasümbolid** *(metacharacter)*. Esindavad regulaaravaldises midagi muud (mitte iseennast).
 - **Otsitav sõne** *(target string, search string)*. Sümbolitejärjend, millele regulaaravaldis peaks vastama, teatud mõttes otsingu märksõna.
 - **Otsing, regulaaravaldis** *(search expression)*. Regulaaravaldis või sümbolitejärjend, mida kasutame otsitava sõne leidmiseks.
-- **Varjestamine** *(escaping)*. Metasümboli muutmine literaalseks. Metasümboli saab muuta literaalseks, \\-märgiga, st erisümbolilt võetakse ära tema eritähendus ning peale varjestamist esindab see sümbol iseennast ehk on literaalne.
+- **Varjestamine** *(escaping)*. Metasümboli muutmine literaalseks. Metasümboli saab muuta literaalseks \\-märgiga, st erisümbolilt võetakse ära tema eritähendus ning peale varjestamist esindab see sümbol iseennast ehk on literaalne.
 - Suuri ja väikseid tähti loetakse erinevateks sümboliteks, st et *a* ja *A* ei ole sama asi.
 
 ## Lihtsad otsingud
