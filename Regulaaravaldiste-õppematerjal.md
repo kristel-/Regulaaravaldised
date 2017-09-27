@@ -32,28 +32,28 @@ Regulaararvaldisest võib mõelda ka kui teatud tüüpi keelest, millel on oma r
 | Sümbol | Tähistab  |
 |--|--|
 |**.**|  punkt: suvaline üks sümbol |
-|**^**| (katus): rea algus, nurksulgude sees esimese märgina eitus.      Katusemärgi saab klaviatuurilt kombinatsiooniga `Shift + AltGr + ä`. |
-|**$**|  (dollar): rea lõpp  |
+|**^**| katus: rea algus, nurksulgude sees esimese märgina eitus.      Katusemärgi saab klaviatuurilt kombinatsiooniga `Shift + AltGr + ä`. |
+|**$**| dollar: rea lõpp  |
 |**\\**|  tagurpidi kaldkriips: teeb talle järgneva metasümboli literaalseks sümboliks|
 |**\***|tärn: suvaline arv, sh 0 temast vasakule jäävat sümbolit (null kuni lõpmatu arv kordusi)|
 |**\+** | pluss: eelnev sümbol kordub üks või enam korda: aa+ = *aa*, *aaa*, *aaaaa*, mitte *a*
 |**?** | küsimärk: eelnev sümbol kordub null või üks kord: aa? = *a*, *aa*, mitte *aaa*
-|**{n,m}** | looksulud: mitu eelnevat sümbolit (nt **ai{2}** leiab *aii*; ai{2,4} leiab |*aii*, *aiii* ja *aiiii*)
+|**{n,m}** | looksulud: mitu eelnevat sümbolit (nt **ai{2}** leiab *aii*; ai{2,4} leiab *aii*, *aiii* ja *aiiii*)
 |**{n,}** | leiab vähemalt n eelnevat sümbolit
 |**{,n}** |leiab kuni n eelnevat sümbolit 
 |**{n}** | leiab n eelnevat sümbolit
 |**[...]** | Klass: üks [ ] vahel olevatest sümbolitest. Nurksulgude sees on erimärgid tavalises tähenduses. Nii leiab [akm] kas *a*, *k* või *m*. NB! Nurksulgudes saab niimoodi otsida vaid üksikuid sümboleid, *a* või *k* või *m*, aga mitte järjendit *akm*. Ka kompleksseid märke, nt **\\w** ja **\\S** (põhjalikumalt hiljem), võib kasutada nurksulgude vahel. Kui nurksulgude vahel on vaja kasutada sidekriipsu (literaalsena) või lõpetavat nurksulgu, siis tuleb see panna esimeseks märgiks sulgude sees, või peab talle eelnema tagurpidi kaldkriips. Nii leiab **[]]** näiteks lõpetava nurksulu. **[0123456789]** (sobib iga number).|
-|**[\^abc]**|Nurksulgudes on võimalik ka eitada, st mingid sümbolid otsingust välja arvata. Selleks tuleb **^** panna esimeseks märgiks sulgude sisse. (Kui **^** ei ole esimene märk, siis kasutatakse teda (literaalsena) nagu iga teist märki.) Nii näiteks leiab **A[^5]** järjendid *A4*, *A3*, *A2*, *A1*, *Aa*, kuid mitte *A5*. **[^^]** leiab kõik peale **^**. õimalik luua ka "negatiivseid" märgiklasse, kus sobib **“kõik, välja arvatud”**. Selleks tuleb klassi algusse asetada katus **^** **[^abc]** tähendab, et sobib iga märk, välja arvatud *a, b* või *c*.  **[^ ]** tähendab, et sobib kõik peale tühiku.**[^ ]\*** tähendab, et otsitakse kõiki sümboleid ükskõik kui palju, kuid mitte tühikuid.|
-| **\--** |tähistab vahemikku|
+|**[\^abc]**|Nurksulgudes on võimalik ka eitada, st mingid sümbolid otsingust välja arvata. Selleks tuleb **^** panna esimeseks märgiks sulgude sisse. (Kui **^** ei ole esimene märk, siis kasutatakse teda (literaalsena) nagu iga teist märki.) Nii näiteks leiab **A[^5]** järjendid *A4*, *A3*, *A2*, *A1*, *Aa*, kuid mitte *A5*. **[^^]** leiab kõik peale **^**. Võimalik luua ka "negatiivseid" märgiklasse, kus sobib **“kõik, välja arvatud”**. Selleks tuleb klassi algusse asetada katus **^** **[^abc]** tähendab, et sobib iga märk, välja arvatud *a, b* või *c*.  **[^ ]** tähendab, et sobib kõik peale tühiku.**[^ ]\*** tähendab, et otsitakse kõiki sümboleid ükskõik kui palju, kuid mitte tühikuid.|
+| **\-** |tähistab vahemikku|
 | **\|** | Toru tähenduses **või**. Regulaaravaldis: **mina\|meie** otsib nii mina kui ka meie. NB! Pane tähele erinevust **[minameie]** ja **mina\|meie** vahel.
-|**[a-z]<br>[A-Z]<br>[0-9]**|Kuna tähtedel ja numbritel on loogiline järjekord, võib neid vahemikke määrates ka lühendada: **[a-c]** on sama, mis **[abc]** ja **[0-9]** on sama, mis **[0123456789]**.Selliseid konstruktsioone võib kombineerida näiteks **[a-fynot1-38]** (selle vastab *a, b, c, d, e, f, y, n, o, t,* *1, 2, 3* või *8*). Et suur- ja väiketähti käsitletakse erinevatena, siis tuleb tõstutundetu märgiklassi loomiseks, mis leiaks näiteks *a, b, A* ja *B* kindlasti kirjutada **[aAbB]**.Aga kõik tähed? Milline tähestik? **[a-zA-Z] [a-üA-Ü]**[www.cl.ut.ee](www.cl.ut.ee) kasutajaliideses **[a-z]**, aga täpitähti esitavad olemid jäävad neist klassidest ikkagi välja.|
-| **[:alpha:]** | tähistab tähestiku tähti
-| **[:upper:]** | suurtähti
-| **[:lower:]** | väiketähti
-| **[:digit:]** | numbreid
-| **[:punct:]** | kirjavahemärke
+|**[a-z]<br>[A-Z]<br>[0-9]**|Kuna tähtedel ja numbritel on loogiline järjekord, võib neid vahemikke määrates ka lühendada: **[a-c]** on sama, mis **[abc]** ja **[0-9]** on sama, mis **[0123456789]**. Selliseid konstruktsioone võib kombineerida näiteks **[a-fynot1-38]** (selle vastab *a, b, c, d, e, f, y, n, o, t,* *1, 2, 3* või *8*). Et suur- ja väiketähti käsitletakse erinevatena, siis tuleb tõstutundetu märgiklassi loomiseks, mis leiaks näiteks *a, b, A* ja *B* kindlasti kirjutada **[aAbB]**. Aga kõik tähed? Milline tähestik? **[a-zA-Z] [a-üA-Ü]**. [Kirjakeele korpuse](www.cl.ut.ee) kasutajaliideses **[a-z]**, aga täpitähti esitavad olemid jäävad neist klassidest ikkagi välja.|
+| **[:alpha:]** | tähestiku tähed
+| **[:upper:]** | suurtähed
+| **[:lower:]** | väiketähed
+| **[:digit:]** | numbrid
+| **[:punct:]** | kirjavahemärgid
 
-Eeeldefineeritud klassid ei kehti [www.cl.ut.ee](www.cl.ut.ee) kasutajaliideses, aga nt enamasti programmeerimiskeeltes olemas.
+Eeeldefineeritud klassid ei kehti [Kirjakeele korpuse](www.cl.ut.ee) kasutajaliideses, aga nt enamasti programmeerimiskeeltes olemas.
 
 ## Kvantorid. Mis on erinevus?
 - \+ ja {1,}
@@ -75,13 +75,6 @@ Eeeldefineeritud klassid ei kehti [www.cl.ut.ee](www.cl.ut.ee) kasutajaliideses,
 - [ms]ina
 - mina|sina
 
-
-
-## Mis nüüd?
-*"Some people, when confronted with a problem, think \'I know I'll use regular expressions.\' Now they have two problems."* 
-
-— Jamie Zawinski/Fredrik Lundh?
-
 ## Ülesanded
 - Milline regulaaravaldis vastab tervele reale, ükskõik mida ja ükskõik millisel hulgal ta sisaldab?
 - Milline regulaaravaldis vastab reale,
@@ -92,7 +85,8 @@ Eeeldefineeritud klassid ei kehti [www.cl.ut.ee](www.cl.ut.ee) kasutajaliideses,
 
 ## Komplekssed märgid
 Koosnevad tagurpidi kaldkriipsust (**\\**) ja ühest alltoodud märkidest. Kui \\ järel ei ole üht allpooltoodud märkidest, siis otsitakse \\-le järgnevat märki ennast. Nii näiteks leitakse \\$ vasteks dollarimärk.
-|  |  |
+
+|  Sümbol | Tähistab  |
 |--|--|
 | **\\A** | Leiab rea alguse (sama mis **^**).
 | **\\b** | Leiab sõna alguse ja lõpu.
@@ -147,6 +141,12 @@ Vastused juhuslikus järjekorras: (vana) (kere) ja \\2 \\1; (tere)(, )\\1\\2; (t
 
 ![enter image description here](https://i.imgur.com/5oEOzcS.png)
 ![https://xkcd.com/208/](regular_expressions.png)
+
+
+## Mis nüüd?
+*"Some people, when confronted with a problem, think \'I know I'll use regular expressions.\' Now they have two problems."* 
+
+— Jamie Zawinski/Fredrik Lundh?
 
 ## Lisamaterjale
 - Rohkem näiteid ja rakendusvõimalusi leiab näiteks korpuslingvistika kursuse [kodulehelt](korpuslingvistika.ut.ee).
