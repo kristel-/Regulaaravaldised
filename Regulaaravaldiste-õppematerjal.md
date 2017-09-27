@@ -102,7 +102,7 @@ Koosnevad tagurpidi kaldkriipsust (**\\**) ja ühest alltoodud märkidest. Kui \
 |**\\W** | Leiab iga mitte-tähe, -numbri või -allkriipsu. Samaväärne väljendiga **[\\^a-zA-Z0-9_]** kasutajaliideses. Vt ka eelmist märkust.
 |**\\Z** | Leiab rea lõpu. Samaväärne **$**-ga.
 
-Sõna defineeritakse kui tähtede-numbrite ja allkriipsude jada, nii et sõna lõppu tähistab tühik või märk, mis ei kuulu tähtede, numbrite ega allkriipsu hulka. Kuna täpitähed ja "susisevad" tähed kasutajaliideses www.cl.ut.ee sisaldavad ampersandi (&) ja semikoolonit (;), siis ei kuulu nad selle definitsiooni kohaselt sõna hulka, nagu ka sidekriips.
+Sõna defineeritakse kui tähtede-numbrite ja allkriipsude jada, nii et sõna lõppu tähistab tühik või märk, mis ei kuulu tähtede, numbrite ega allkriipsu hulka. Kuna täpitähed ja "susisevad" tähed kasutajaliideses [kirjakeele korpuse](www.cl.ut.ee) sisaldavad ampersandi (&) ja semikoolonit (;), siis ei kuulu nad selle definitsiooni kohaselt sõna hulka, nagu ka sidekriips.
 
 
 ## Milleks mulle kõik see?
@@ -112,7 +112,7 @@ Sõna defineeritakse kui tähtede-numbrite ja allkriipsude jada, nii et sõna l�
 - Tekstidega töötamisel täiesti asendamatu abivahend
 - Failitöötlus (nimeta ümber sada faili ühe korraga)
 - Üsna universaalne töövahend (programmeerimiskeeled, andmebaasid toetavad)
-- **Võimaldavad automatiseerida korduvaid tüütuid ülesndeid**
+- **Võimaldavad automatiseerida korduvaid tüütuid ülesndeid!**
 
 ## "Ahned" (*greedy*) ja "laisad" (*lazy*) päringud
 Kvantorid on vaikimisi "ahned", st et regulaaravaldisele vastab maksimaalne sobiv üksus. Enamasti pole see aga soovitud tulemus. Ahne päringu saab laisaks muuta ?-ga. Näiteks:
@@ -131,13 +131,15 @@ Tavaliste sulgudega saab moodustada ka rühmi, millele on võimalik n-ö tagasi 
 
 ## Tagasiviitamise harjutus
 
-  $\qquad$ *tere, tere, vana kere*
+ *tere, tere, vana kere*
 
-- Kuidas leida selle näite eeskujul juhtumid, kus sõna *tere* esineb kaks korda järjest?
-- Kuidas samast näitest teha otsing kahe grupiga, nii et leitaks nii tere kui ka talle järgnev koma ja tühik?
+- Kuidas leida selles näites juhtumid, kus sõna *tere* esineb kaks korda järjest?
+- Kuidas samast näitest teha otsing kahe grupiga, nii et leitaks nii *tere* kui ka talle järgnev koma ja tühik?
 - Kuidas tagasiviitamist ja rühmi kasutades vahetada sõnade *vana* ja *kere* järjekord?
 
 Vastused juhuslikus järjekorras: (vana) (kere) ja \\2 \\1; (tere)(, )\\1\\2; (tere), \\1
+
+---
 
 ![enter image description here](https://i.imgur.com/5oEOzcS.png)
 ![https://xkcd.com/208/](regular_expressions.png)
@@ -149,7 +151,7 @@ Vastused juhuslikus järjekorras: (vana) (kere) ja \\2 \\1; (tere)(, )\\1\\2; (t
 — Jamie Zawinski/Fredrik Lundh?
 
 ## Lisamaterjale
-- Rohkem näiteid ja rakendusvõimalusi leiab näiteks korpuslingvistika kursuse [kodulehelt](korpuslingvistika.ut.ee).
+- Rohkem näiteid ja rakendusvõimalusi leiab näiteks korpuslingvistika kursuse [kodulehelt](http://korpuslingvistika.ut.ee/).
 - [Demystifying RegEx with Practical Examples](https://www.sitepoint.com/demystifying-regex-with-practical-examples/)
 - [Here's what ICT should really teach kids: how to do regular expressions](https://www.theguardian.com/technology/2012/dec/04/ict-teach-kids-regular-expressions)
 -  [Väga head lihtsad harjutused alustuseks](https://regexone.com/)
