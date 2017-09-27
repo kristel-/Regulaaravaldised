@@ -1,30 +1,4 @@
 
-Skip to content
-This repository
-
-    Pull requests
-    Issues
-    Marketplace
-    Explore
-
-    @kristel-
-
-1
-0
-
-    0
-
-kristel-/Regulaaravaldised
-Code
-Issues 0
-Pull requests 0
-Projects 0
-Wiki
-Settings
-Regulaaravaldised/Regulaaravaldiste-õppematerjal
-28ccdaf 26 seconds ago
-@kristel- kristel- loengumaterjal
-170 lines (136 sloc) 12.8 KB
 # Regulaaravaldised
 ### *Kristel Uiboaed*
 #### 29. september 2017
