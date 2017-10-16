@@ -13,7 +13,7 @@ Salvesta oma arvutisse fail [*kuluhyvitis.txt*](kuluhyvitis.txt).
 
 ## Harjutusi kirjakeele korpuse kasutajaliidesega
 
-Tutvu iseseisvalt [kirjakeele korpuse](http://www.cl.ut.ee/korpused/segakorpus/index.php?lang=et) ja selle [päringuabiga](http://www.cl.ut.ee/korpused/kasutajaliides/erispikker#olemid). Kui konkreetset alamkorpust pole ülesandes mainitud, võid teha otsingu mis tahes alamkorpusest.
+Tutvu iseseisvalt [kirjakeele korpuse](http://www.cl.ut.ee/korpused/segakorpus/index.php?lang=et), [selle kasutajaliidese](http://www.cl.ut.ee/korpused/kasutajaliides/) ja [päringuabiga](http://www.cl.ut.ee/korpused/kasutajaliides/erispikker#olemid). Kui konkreetset alamkorpust pole ülesandes mainitud, võid teha otsingu mis tahes alamkorpusest.
 
 1. Kuidas otsida ühe päringuga *eile* ja *Eile*?
 2. Otsi Valgamaalase ja Lääne Elu alamkorpustest kõiki potentsiaalseid eesti autode registreerimistunnuseid.
